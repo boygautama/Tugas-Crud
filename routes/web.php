@@ -12,16 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('backend.index');
+    return view('welcome');
 });
 
-Route::get('/data-tables', function () {
-    return view('backend.data-tables');
-});
+Route::get('/pertanyaan', 'PertanyaanController@index');
 
-Route::get('/master', function () {
-    return view('backend.themes.master');
-});
+// Route::get('/master', function () {
+//     return view('backend.themes.master');
+// });
 
 // Route::get('/info', function () {
 //     return view('info');
