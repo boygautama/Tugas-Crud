@@ -31,7 +31,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                            <a href="/pertanyaan" class="nav-link">
+                            <a href="/pertanyaan" class="nav-link {{ (request()->is('pertanyaan*')) ? 'active' : '' }}">
                                  <i class="nav-icon fas fa-table"></i>
                                 <p>Pertanyaan</p>
                             </a>

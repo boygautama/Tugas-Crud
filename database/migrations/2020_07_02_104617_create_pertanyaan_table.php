@@ -15,11 +15,11 @@ class CreatePertanyaanTable extends Migration
     {
         Schema::create('pertanyaan', function (Blueprint $table) {
             $table->bigIncrements('tanya_id');
-            $table->string('tanya_judul', 255);
-            $table->text('tanya_isi');
-            $table->timestamp('jawab_tgl')->nullable();
-            $table->timestamp('jawab_update')->nullable();
-            $table->string('tanya_nama', 255);
+            $table->string('tanya_judul', 255)->nullable();
+            $table->text('tanya_isi')->nullable();
+            $table->timestamp('tanya_tgl')->useCurrent();
+            $table->timestamp('tanya_update')->nullable();
+            $table->string('tanya_nama', 255)->nullable();
         });
     }
 

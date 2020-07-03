@@ -15,12 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
 Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/detail/{id}', 'PertanyaanController@detail');
 
-// Route::get('/master', function () {
-//     return view('backend.themes.master');
-// });
-
-// Route::get('/info', function () {
-//     return view('info');
-// });
