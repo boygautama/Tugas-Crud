@@ -2,19 +2,19 @@
 namespace App\Models;
 use Illuminate\Support\Facades\DB;
 
-class PertanyaanModel
+class JawabanModel
 {
-    public static function get_all(){
-        $data = DB::table('pertanyaan')->get();
+
+    public  static  function cari($id)
+    {
+        $data = DB::table('jawaban')->where('tanyaid', '=', $id)->get();
+        // dd($data);
         return $data;
     }
-    public static function save($data){
+        public static function save($data){
+            //  dd($data);
         unset($data["_token"]);
-        $new_data = DB::table('pertanyaan')->insert($data);
+        $new_data = DB::table('jawaban')->insert($data);
         return $new_data;
-    }
-       public static function where($id){
-        $data = DB::table('pertanyaan')->where('tanya_id', '=', $id)->get();
-        return $data;
     }
 }

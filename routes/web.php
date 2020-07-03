@@ -20,4 +20,6 @@ Route::get('/pertanyaan/create', 'PertanyaanController@create');
 Route::post('/pertanyaan', 'PertanyaanController@store');
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/detail/{id}', 'PertanyaanController@detail');
+Route::post('/jawaban', 'JawabanController@store');
+Route::get('/jawaban/{id}', 'JawabanController@index');
 
