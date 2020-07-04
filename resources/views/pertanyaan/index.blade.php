@@ -48,7 +48,13 @@
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" href="/pertanyaan/{{$data->tanya_id}}"><i class="fas fa-folder"></i> View</a>
                           <a class="btn btn-info btn-sm" href="/pertanyaan/{{$data->tanya_id}}/edit"><i class="fas fa-pencil-alt"></i> Edit</a>
-                          <a class="btn btn-danger btn-sm" href="/pertanyaan/{{$data->tanya_id}}/delete"><i class="fas fa-trash"></i> Delete</a>
+                          {{-- <a class="btn btn-danger btn-sm" href="/pertanyaan/{{$data->tanya_id}}/delete"><i class="fas fa-trash"></i> Delete</a> --}}
+                          <form action="/pertanyaan/{{$data->tanya_id}}" method="POST" style="display:inline;">
+                          @csrf
+                          @method('DELETE')
+                          <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash"></i> Delete</button>
+                          </form>
+                          
                       </td>
                   </tr>
       @endforeach

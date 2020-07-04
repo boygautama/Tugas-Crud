@@ -16,13 +16,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('/pertanyaan/create', 'PertanyaanController@create');
-Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan/create', 'PertanyaanController@tambah');
+Route::post('/pertanyaan', 'PertanyaanController@insert');
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/{id}', 'PertanyaanController@detail');
 Route::get('/pertanyaan/{id}/edit', 'PertanyaanController@edit');
-Route::post('/pertanyaan/{id}', 'PertanyaanController@ubah');
-Route::get('/pertanyaan/{id}/delete', 'PertanyaanController@hapus');
+Route::put('/pertanyaan/{id}', 'PertanyaanController@update');
+// Route::get('/pertanyaan/{id}/delete', 'PertanyaanController@hapus');
+Route::delete('/pertanyaan/{id}', 'PertanyaanController@hapus');
 
 Route::post('/jawaban', 'JawabanController@store');
 Route::get('/jawaban/{id}', 'JawabanController@index');

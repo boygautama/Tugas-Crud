@@ -11,15 +11,13 @@ class JawabanController extends Controller
     //
     public function index($id)
     {
-        $datatanya = PertanyaanModel::where($id)->first();
+        $datatanya = PertanyaanModel::detail($id)->first();
         $data = JawabanModel::cari($id);
         return view('jawaban.index', compact('data', 'datatanya'));
     }
     public function store(Request $request)
     {
         $new_data = JawabanModel::save($request->all());
-        // dd($request);
-        // return redirect('/jawaban');
-        return redirect('/jawaban/' . $request->tanyaid);
+        return redirect('/pertanyaan/' . $request->tanyaid);
     }
 }

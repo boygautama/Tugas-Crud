@@ -8,7 +8,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><i class="fa fa-dashboard"></i></li>
+              <li class="breadcrumb-item"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
               <li class="breadcrumb-item active">Pertanyaan</li>
             </ol>
           </div>
@@ -17,7 +17,11 @@
     </section>
 <section class="content">
     
-
+ @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
 <div class="row">
 <div class="col-md-8">

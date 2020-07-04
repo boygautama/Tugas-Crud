@@ -20,6 +20,7 @@
 <section class="content">
      <form action="/pertanyaan/{{$data->tanya_id}}" method="POST">
         @csrf
+        {{ method_field('PUT') }}
         <input type="hidden" name="tanya_id" value="{{$data->tanya_id}}">
      <div class="card">
       <!-- /.card-header -->
