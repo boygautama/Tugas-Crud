@@ -36,7 +36,7 @@
                           <a href="#">{{$datatanya->tanya_nama}}</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
                         </span>
-                        <span class="description">Shared publicly - {{$datatanya->tanya_tgl}}</span>
+                        <span class="description">Tgl Tanya - {{$datatanya->tanya_tgl}} {{(!empty($datatanya->tanya_update)? '/ Update :'.$datatanya->tanya_update:'')}}</span>
                       </div>
                       <!-- /.user-block -->
                       <b>{{$datatanya->tanya_judul}}</b>
